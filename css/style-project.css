@@ -134,6 +134,7 @@ body {
    
 .header .header-right {
     float: right;
+    
 }
    
 .header .header-right .links {
@@ -161,6 +162,7 @@ body {
     flex-wrap: wrap;
     text-align: end;
     justify-content: flex-start;
+    padding: 20px 0;
 }
 
 .container-1 {
@@ -173,6 +175,7 @@ body {
 .img-project {
     width: 30%;
     height: 70%;
+
     object-fit:cover;
     
     -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
