@@ -40,19 +40,18 @@
   
 
 .wrapper {
-    min-width: min(40rem, 100%);
     max-width: 1170px;
-    height: 800px;
     margin: auto;
 }
 
 
   
 .box {
+    height: 650px;
     font-size: 3vw;
     margin: max(1rem, 3vw);
     border: 0.35rem solid;
-    padding: 3vw 3vw 0;
+    padding: 3vw 3vw 0vw;
     border-image: conic-gradient(
         from var(--angle),
         var(--c2),
@@ -161,6 +160,7 @@ body {
     flex-wrap: wrap;
     text-align: end;
     justify-content: flex-start;
+    padding: 20px 0;
 }
 
 .container-1 {
