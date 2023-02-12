@@ -140,12 +140,11 @@ body {
     width: 30%;
     width: 55px;
     padding: 10px;
-    
 }
   
   
 .header .header-right .links:hover {
-    width: 60px;
+    filter: drop-shadow(0 0 10px #89898d);
 }
   
 .header .header-right .social-links {
