@@ -1,0 +1,290 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-prymary: #1d1d20;
+    --color-secondary: #d1d1d1;
+    --d: 2500ms;
+    --angle: 90deg;
+    --gradX: 100%;
+    --gradY: 50%;
+    --c1: rgba(168, 239, 255, 1);
+    --c2: rgba(168, 239, 255, 0.1);
+}
+
+
+/***************************
+    BORDER AROUND
+*************************/
+
+@property --angle {
+    syntax: "<angle>";
+    initial-value: 90deg;
+    inherits: true;
+}
+  
+@property --gradX {
+    syntax: "<percentage>";
+    initial-value: 50%;
+    inherits: true;
+}
+  
+@property --gradY {
+    syntax: "<percentage>";
+    initial-value: 0%;
+    inherits: true;
+}
+  
+
+.wrapper {
+    min-width: min(40rem, 100%);
+    max-width: 1170px;
+    height: 800px;
+    margin: auto;
+}
+
+
+  
+.box {
+    font-size: 3vw;
+    margin: max(1rem, 3vw);
+    border: 0.35rem solid;
+    padding: 3vw 3vw 0;
+    border-image: conic-gradient(
+        from var(--angle),
+        var(--c2),
+        var(--c1) 0.1turn,
+        var(--c1) 0.15turn,
+        var(--c2) 0.25turn
+      )
+      30;
+    animation: borderRotate var(--d) linear infinite forwards;
+}
+  
+.box:nth-child(2) {
+    border-image: radial-gradient(
+        ellipse at var(--gradX) var(--gradY),
+        var(--c1),
+        var(--c1) 10%,
+        var(--c2) 40%
+      )
+      30;
+    animation: borderRadial var(--d) linear infinite forwards;
+}
+  
+@keyframes borderRotate {
+    100% {
+      --angle: 420deg;
+    }
+}
+  
+@keyframes borderRadial {
+    20% {
+      --gradX: 100%;
+      --gradY: 50%;
+    }
+    40% {
+      --gradX: 100%;
+      --gradY: 100%;
+    }
+    60% {
+      --gradX: 50%;
+      --gradY: 100%;
+    }
+    80% {
+      --gradX: 0%;
+      --gradY: 50%;
+    }
+    100% {
+      --gradX: 50%;
+      --gradY: 0%;
+    }
+}
+
+/*******************
+    HEADER
+********************/
+
+body {
+    background-color: var(--color-prymary);
+    color: var(--color-secondary);
+    font-family: "Montserrat", sans-serif;
+    
+}
+
+.header {
+    padding: 0;
+    display:block;
+    justify-content: space-between;
+}
+
+.header .logo {
+    width:30%;
+    max-width: 80px;
+    
+  }
+  
+.header .logo:hover {
+    filter: drop-shadow(1px 1px 5px white);
+    transition: 0.5s;
+}
+   
+.header .header-right {
+    float: right;
+}
+   
+.header .header-right .links {
+    width: 30%;
+    width: 55px;
+    padding: 10px;
+}
+  
+  
+.header .header-right .links:hover {
+    filter: drop-shadow(0 0 10px #89898d);
+}
+  
+.header .header-right .social-links {
+    text-decoration: none;
+}
+  
+
+/****************
+    CONTAINER
+****************/
+
+.general-container {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: end;
+    justify-content: flex-start;
+}
+
+.container-1 {
+    width: 400px;
+    height: 330px;
+    display:grid;
+    place-items:center;
+}
+
+.img-project {
+    width: 30%;
+    height: 70%;
+    object-fit:cover;
+    
+    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
+    
+    transform-origin:center;
+    transform:perspective(800px) rotateY(25deg);
+    transition:0.5s;
+  }
+  .container-1 {
+    max-width:600px;
+    max-height:350px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:20px;
+    
+  }
+  .container-1:hover img {
+    opacity:0.3;
+  }
+  .container-1 img:hover {
+    transform:perspective(800px)       rotateY(0deg);
+    opacity:1;
+  }
+
+
+/*********************************************************************/
+.container-2 {
+    width: 100%;
+    height: 100%;
+    max-width: 400px;  
+    display: block;
+    margin: 40px auto;
+   
+}
+
+.container-2 ul li a {
+    text-decoration: none;
+}
+
+@media (max-width: 925px) {
+
+    .container-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-2 ul {
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .container-2 ul li .card {
+       max-width: 70px;
+        font-size: 10px;
+        margin: 2px;
+       
+    }
+
+
+
+}
+
+.container-2 ul li {
+    list-style: none; 
+    
+}
+
+/*****************
+  CARD
+******************/
+.card {
+    padding: 1em 1.8em;
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+    border: 1px solid #303030;
+    box-shadow: 2px 2px 15px #1d1d20 inset;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .card:hover {
+    color: var(--color-secondary);
+    box-shadow: 2px 2px 15px #d1d1d1 inset;
+  }
+  
+       
+/***********************************************/
+
+.footer {
+    text-align: right;
+    width: 100%;
+    padding: 35px 0 10px;
+    font-size: 14px;
+    position: relative;
+    text-decoration: none;
+  }
+
+  
+
+
+
+
+
+
