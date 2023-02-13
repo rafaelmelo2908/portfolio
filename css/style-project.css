@@ -165,41 +165,6 @@ body {
     padding: 20px 0;
 }
 
-.container-1 {
-    width: 400px;
-    height: 330px;
-    display:grid;
-    place-items:center;
-}
-
-.img-project {
-    width: 30%;
-    height: 70%;
-
-    object-fit:cover;
-    
-    -webkit-box-reflect:below 2px linear-gradient(transparent, transparent, #0004);
-    
-    transform-origin:center;
-    transform:perspective(800px) rotateY(25deg);
-    transition:0.5s;
-  }
-  .container-1 {
-    max-width:600px;
-    max-height:350px;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:20px;
-    
-  }
-  .container-1:hover img {
-    opacity:0.3;
-  }
-  .container-1 img:hover {
-    transform:perspective(800px)       rotateY(0deg);
-    opacity:1;
-  }
 
 
 /*********************************************************************/

@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <link rel="stylesheet" href="css/gallery.theme.css" />
+    <link rel="stylesheet" href="css/gallery.min.css" />
+
     <title>Projects</title>
 
     <link rel="shortcut icon" type="image/x-icon" href="imagem/logo_aba.png" />
@@ -51,10 +54,49 @@
         </header>
 
         <div class="general-container">
-          <div class="container-1">
-            <img class="img-project" src="imagem/Barbershop.png" alt="Barbershop">
-            <img class="img-project" src="imagem/Curriculum.png" alt="Curriculum">
-            <img class="img-project" src="imagem/Linktree.png" alt="Linktree">  
+          <div class="gallery autoplay items-3">
+            <div id="item-1" class="control-operator"></div>
+            <div id="item-2" class="control-operator"></div>
+            <div id="item-3" class="control-operator"></div>
+
+            <figure class="item">
+              <div>
+                <h4>Barber Shop</h4>
+                <p>Tech Stack: HTML, CSS <br> 
+                Desktop and Mobile Responsiveness</p>
+                <a href="#" target="_blank" ><button class="button-sites">Github</button></a>
+                <a href="#" target="_blank" ><button class="button-sites">Site</button></a> 
+              </div>
+              <img class="img" src="imagem/Barbershop.png" />
+            </figure>
+
+            <figure class="item">
+              <div>
+                <h4>Curriculum</h4>
+                <p>Tech Stack: HTML, CSS <br> 
+                Desktop and Mobile Responsiveness</p>
+                <a href="https://github.com/rafaelmelo2908/curriculum.github.io" target="_blank" ><button class="button-sites">Github</button></a>
+                <a href="https://curriculum-github-io.vercel.app/" target="_blank" ><button class="button-sites">Site</button></a> 
+              </div>
+              <img class="img" src="imagem/Curriculum.png" />
+            </figure>
+
+            <figure class="item">
+              <div>
+                <h4>Linktree</h4>
+                <p>Tech Stack: HTML, CSS <br> 
+                Desktop and Mobile Responsiveness</p>
+                <a href="#"  ><button class="button-sites">Github</button></a>
+                <a href="#"  ><button class="button-sites">Site</button></a> 
+              </div>
+              <img class="img" src="imagem/Linktree.png" />
+            </figure>
+
+            <div class="controls">
+              <a href="#item-1" class="control-button"><img src="imagem/grid.png"></a>
+              <a href="#item-2" class="control-button"><img src="imagem/grid.png"></a>
+              <a href="#item-3" class="control-button"><img src="imagem/grid.png"></a>
+            </div>
           </div>
 
           <div class="container-2">
@@ -71,8 +113,6 @@
               <li>
                 <a href="#" target="_blank" class="card"> About </a>
               </li>
-              
-             
             </ul>
           </div>
         </div>

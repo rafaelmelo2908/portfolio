@@ -1,0 +1,85 @@
+.gallery .control-button {
+  color: #000000;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.gallery .control-button:hover {
+  color: rgb(0, 0, 0);
+  color: rgba(0, 0, 0, 0.8);
+}
+
+/*
+	Theme controls how everything looks in Gallery CSS.
+*/
+.gallery {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  max-height: 330px;
+}
+
+.gallery .img {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  margin: 20px 0 0;
+}
+
+.gallery .item {
+  overflow: hidden;
+  text-align: center;
+  background: #1d1d20;
+}
+
+.gallery .item h4 {
+  text-align: justify;
+  font-weight: bold;
+  position: relative;
+  font-size: max(30px, .2vw);
+  margin-bottom: 10px;
+}
+
+.gallery .item p {
+  text-align: justify;
+  font-size: max(15px, .2vw);
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gallery .item .button-sites {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #d1d1d1;
+  color: #1d1d20;
+  padding: 0.5em 2em;
+}
+
+.gallery .controls {
+  position:relative;
+  bottom: 0px;
+  text-align: center;
+
+}
+.gallery .control-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: color 0.1s;
+  border-radius: px;
+  border: 1px solid #303030;
+  border-radius: 15px;
+  width: 30px;
+  height: 30px;
+  justify-content: center;
+  font-size: 20px;
+  margin: 30px;
+}
+
+.gallery .control-button:hover {
+  color: #d1d1d1;
+    box-shadow: 2px 2px 15px #d1d1d1 inset;
+}
