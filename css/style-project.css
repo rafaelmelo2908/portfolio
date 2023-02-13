@@ -1,107 +1,103 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    --color-prymary: #1d1d20;
-    --color-secondary: #d1d1d1;
-    --d: 2500ms;
-    --angle: 90deg;
-    --gradX: 100%;
-    --gradY: 50%;
-    --c1: rgba(168, 239, 255, 1);
-    --c2: rgba(168, 239, 255, 0.1);
+  --color-prymary: #1d1d20;
+  --color-secondary: #d1d1d1;
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgba(168, 239, 255, 1);
+  --c2: rgba(168, 239, 255, 0.1);
 }
-
 
 /***************************
     BORDER AROUND
 *************************/
 
 @property --angle {
-    syntax: "<angle>";
-    initial-value: 90deg;
-    inherits: true;
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
 }
-  
+
 @property --gradX {
-    syntax: "<percentage>";
-    initial-value: 50%;
-    inherits: true;
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
 }
-  
+
 @property --gradY {
-    syntax: "<percentage>";
-    initial-value: 0%;
-    inherits: true;
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
 }
-  
 
 .wrapper {
-    min-width: min(40rem, 100%);
-    max-width: 1170px;
-    margin: auto;
+  min-width: min(40rem, 100%);
+  max-width: 1170px;
+  margin: auto;
 }
 
-
-  
 .box {
   height: 650px;
-    font-size: 3vw;
-    margin: max(1rem, 3vw);
-    border: 0.35rem solid;
-    padding: 3vw 3vw 0vw;
-    border-image: conic-gradient(
-        from var(--angle),
-        var(--c2),
-        var(--c1) 0.1turn,
-        var(--c1) 0.15turn,
-        var(--c2) 0.25turn
-      )
-      30;
-    animation: borderRotate var(--d) linear infinite forwards;
+  font-size: 3vw;
+  margin: max(1rem, 3vw);
+  border: 0.35rem solid;
+  padding: 3vw 3vw 0vw;
+  border-image: conic-gradient(
+      from var(--angle),
+      var(--c2),
+      var(--c1) 0.1turn,
+      var(--c1) 0.15turn,
+      var(--c2) 0.25turn
+    )
+    30;
+  animation: borderRotate var(--d) linear infinite forwards;
 }
-  
+
 .box:nth-child(2) {
-    border-image: radial-gradient(
-        ellipse at var(--gradX) var(--gradY),
-        var(--c1),
-        var(--c1) 10%,
-        var(--c2) 40%
-      )
-      30;
-    animation: borderRadial var(--d) linear infinite forwards;
+  border-image: radial-gradient(
+      ellipse at var(--gradX) var(--gradY),
+      var(--c1),
+      var(--c1) 10%,
+      var(--c2) 40%
+    )
+    30;
+  animation: borderRadial var(--d) linear infinite forwards;
 }
-  
+
 @keyframes borderRotate {
-    100% {
-      --angle: 420deg;
-    }
+  100% {
+    --angle: 420deg;
+  }
 }
-  
+
 @keyframes borderRadial {
-    20% {
-      --gradX: 100%;
-      --gradY: 50%;
-    }
-    40% {
-      --gradX: 100%;
-      --gradY: 100%;
-    }
-    60% {
-      --gradX: 50%;
-      --gradY: 100%;
-    }
-    80% {
-      --gradX: 0%;
-      --gradY: 50%;
-    }
-    100% {
-      --gradX: 50%;
-      --gradY: 0%;
-    }
+  20% {
+    --gradX: 100%;
+    --gradY: 50%;
+  }
+  40% {
+    --gradX: 100%;
+    --gradY: 100%;
+  }
+  60% {
+    --gradX: 50%;
+    --gradY: 100%;
+  }
+  80% {
+    --gradX: 0%;
+    --gradY: 50%;
+  }
+  100% {
+    --gradX: 50%;
+    --gradY: 0%;
+  }
 }
 
 /*******************
@@ -109,150 +105,310 @@
 ********************/
 
 body {
-    background-color: var(--color-prymary);
-    color: var(--color-secondary);
-    font-family: "Montserrat", sans-serif;
-    
+  background-color: var(--color-prymary);
+  color: var(--color-secondary);
+  font-family: "Montserrat", sans-serif;
 }
 
 .header {
-    padding: 0;
-    display:block;
-    justify-content: space-between;
+  padding: 0;
+  display: block;
+  justify-content: space-between;
 }
 
 .header .logo {
-    width:30%;
-    max-width: 80px;
-    
-  }
-  
+  width: 30%;
+  max-width: 80px;
+}
+
 .header .logo:hover {
-    filter: drop-shadow(1px 1px 5px white);
-    transition: 0.5s;
+  filter: drop-shadow(1px 1px 5px white);
+  transition: 0.5s;
 }
-   
+
 .header .header-right {
-    float: right;
-    
+  float: right;
 }
-   
+
 .header .header-right .links {
-    width: 30%;
-    width: 55px;
-    padding: 10px;
+  width: 30%;
+  width: 55px;
+  padding: 10px;
 }
-  
-  
+
 .header .header-right .links:hover {
-    filter: drop-shadow(0 0 10px #89898d);
+  filter: drop-shadow(0 0 10px #89898d);
 }
-  
+
 .header .header-right .social-links {
-    text-decoration: none;
+  text-decoration: none;
 }
-  
 
 /****************
     CONTAINER
 ****************/
 
 .general-container {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: end;
-    justify-content: flex-start;
-    padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: end;
+  justify-content: flex-start;
+  padding: 20px 0;
 }
 
-
-
-/*********************************************************************/
 .container-2 {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;  
-    display: block;
-    margin: 40px auto;
-   
+  width: 100%;
+  height: 100%;
+  max-width: 400px;
+  display: block;
+  margin: 40px auto;
 }
 
 .container-2 ul li a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-@media (max-width: 925px) {
 
-    .container-2 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container-2 ul {
-        display: flex;
-        justify-content: center;
-       
-    }
-
-    .container-2 ul li .card {
-       max-width: 70px;
-        font-size: 10px;
-        margin: 2px;
-       
-    }
-
-
-
-}
 
 .container-2 ul li {
-    list-style: none; 
-    
+  list-style: none;
+}
+
+/***********************
+SLIDES
+*************************/
+.gallery {
+  margin-bottom: 15px;
+}
+
+.gallery h4 {
+  text-align: justify;
+  font-weight: bold;
+  position: relative;
+  font-size: max(30px, 0.2vw);
+  margin-bottom: 10px;
+}
+
+.gallery p {
+  text-align: justify;
+  font-size: max(15px, 0.2vw);
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.gallery .button-sites {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  border: none;
+  border-radius: 1.1em;
+  background-color: #d1d1d1;
+  color: #1d1d20;
+  padding: 0.5em 2em;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 400px;
+}
+
+.img {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 65%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.conj-dots {
+  width: 100%;
+  text-align: center;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 3s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /*****************
   CARD
 ******************/
 .card {
-    padding: 1em 1.8em;
-    width: 100%;
-    max-width: 400px;
-    background: transparent;
-    border: 1px solid #303030;
-    box-shadow: 2px 2px 15px #1d1d20 inset;
-    border-radius: 20px;
-    text-transform: uppercase;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    color: var(--color-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-  }
-  
-  .card:hover {
-    color: var(--color-secondary);
-    box-shadow: 2px 2px 15px #d1d1d1 inset;
-  }
-  
-       
+  padding: 1em 1.8em;
+  width: 100%;
+  max-width: 400px;
+  background: transparent;
+  border: 1px solid #303030;
+  box-shadow: 2px 2px 15px #1d1d20 inset;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.card:hover {
+  color: var(--color-secondary);
+  box-shadow: 2px 2px 15px #d1d1d1 inset;
+}
+
+.card-1 {
+  padding: 1em 1.8em;
+  width: 100%;
+  max-width: 400px;
+  background: transparent;
+  border: 1px solid #303030;
+  box-shadow: 2px 2px 15px #1d1d20 inset;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--color-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  color: var(--color-secondary);
+  box-shadow: 2px 2px 15px #d1d1d1 inset;
+}
+
+
 /***********************************************/
 
 .footer {
-    text-align: right;
+  text-align: right;
+  width: 100%;
+  padding: 0 5px 10px;
+  font-size: 14px;
+  position: relative;
+  text-decoration: none;
+}
+
+@media (max-width: 925px) {
+  .container-2 {
     width: 100%;
-    padding: 0 5px 10px;
-    font-size: 14px;
-    position: relative;
-    text-decoration: none;
+    text-align: center;
   }
 
-  
+  .container-2 ul {
+    display: flex;
+    justify-content: center;
+  }
 
+  .container-2 ul li .card {
+    max-width: 70px;
+    font-size: 10px;
+    margin: 20px 0 2px;
+  }
 
+  .container-2 ul li .card-1 {
+    max-width: 70px;
+    font-size: 10px;
+    margin: 20px 0 2px;
+  }
 
-
-
-
+  .conj-dots {
+    margin-top: 20px;
+  }
+}

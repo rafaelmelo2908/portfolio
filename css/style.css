@@ -224,6 +224,13 @@ body {
        
     }
 
+    .container-2 ul li .card-1 {
+        max-width: 70px;
+         font-size: 10px;
+         margin: 2px;
+        
+     }
+
 
 
 }
@@ -253,6 +260,27 @@ body {
     align-items: center;
     justify-content: center;
     margin: 20px;
+  }
+
+  .card-1 {
+    padding: 1em 1.8em;
+    width: 100%;
+    max-width: 400px;
+    background: transparent;
+    border: 1px solid #303030;
+    box-shadow: 2px 2px 15px #1d1d20 inset;
+    border-radius: 20px;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    color: var(--color-secondary);
+    box-shadow: 2px 2px 15px #d1d1d1 inset;
   }
   
   .card:hover {
