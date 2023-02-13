@@ -349,8 +349,9 @@ SLIDES
 }
 
 .card:hover {
-  color: var(--color-secondary);
-  box-shadow: 2px 2px 15px #d1d1d1 inset;
+  box-shadow: 0 0 2px rgb(209,209,209), 0 0 25px rgb(209,209,209),
+    0 0 5px rgb(209,209,209), 0 0 100px rgb(209,209,209);
+  transition: 1s;
 }
 
 .card-1 {

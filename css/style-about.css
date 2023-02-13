@@ -163,33 +163,7 @@ body {
     padding: 20px 0;
 }
 
-.container-1 {
-    width: 100%;
-    height: 100%;
-    max-width: 400px;
-    
-}
 
-.container-1 h1 {
-    font-size: max(40px, 4vw);
-    text-align: justify;
-    font-weight: 600;
-     margin: 30px;
-    position: relative;
-}
-
-.container-1 p {
-    text-align: justify;
-    font-size: 15px;
-    font-weight: bold;
-    line-height: 1.6;
-    position: relative;
-    margin: 20px;
-    padding-left: 20px;
-    border-left: 3px solid var(--color-secondary) ;
-    border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
-
-}
 
 .container-2 {
     width: 100%;
@@ -284,9 +258,8 @@ body {
   }
   
   .card:hover {
-    box-shadow: 0 0 2px rgb(209,209,209), 0 0 25px rgb(209,209,209),
-    0 0 5px rgb(209,209,209), 0 0 100px rgb(209,209,209);
-  transition: 1s;
+    color: var(--color-secondary);
+    box-shadow: 2px 2px 15px #d1d1d1 inset;
   }
   
        
