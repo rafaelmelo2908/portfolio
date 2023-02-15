@@ -108,7 +108,7 @@
 ********************/
 
 body {
-    background-color: var(--color-prymary);
+    background: url(../imagem/pxfuel.jpg);
     color: var(--color-secondary);
     font-family: "Montserrat", sans-serif;
     

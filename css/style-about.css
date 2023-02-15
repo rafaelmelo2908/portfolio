@@ -108,7 +108,7 @@
 ********************/
 
 body {
-    background-color: var(--color-prymary);
+  background: url(../imagem/pxfuel.jpg);
     color: var(--color-secondary);
     font-family: "Montserrat", sans-serif;
     
@@ -251,6 +251,7 @@ body {
        rgb(82, 80, 80) 40%, rgb(93, 79, 79) 78%);
     color: white;
     transform: rotateY(180deg);
+    opacity: .6;
   }
 
 /************************************************/

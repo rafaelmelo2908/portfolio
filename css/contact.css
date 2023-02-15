@@ -104,7 +104,7 @@
 ********************/
 
 body {
-  background-color: var(--color-prymary);
+  background: url(../imagem/pxfuel.jpg);
   color: var(--color-secondary);
   font-family: "Montserrat", sans-serif;
 }
@@ -169,6 +169,7 @@ body {
     max-width: 400px;
    
     background: #262629;
+    opacity: 0.8;
     border-radius: 8px;
     box-shadow: 2px 2px 15px #1d1d20 inset;
     padding: 20px 30px;
