@@ -204,36 +204,7 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 925px) {
 
-    .container-2 {
-        width: 100%;
-        text-align: center;
-    }
-
-    .container-2 ul {
-        display: flex;
-        justify-content: center;
-       
-    }
-
-    .container-2 ul li .card {
-       max-width: 70px;
-        font-size: 10px;
-        margin: 2px;
-       
-    }
-
-    .container-2 ul li .card-1 {
-        max-width: 70px;
-         font-size: 10px;
-         margin: 2px;
-        
-     }
-
-
-
-}
 
 .container-2 ul li {
     list-style: none; 
@@ -293,6 +264,7 @@ body {
 /***********************************************/
 
 .footer {
+    margin-top: 60px;
     text-align: right;
     width: 100%;
     padding: 0 5px 10px;
@@ -303,7 +275,40 @@ body {
 
   
 
+  @media (max-width: 925px) {
 
+    .container-2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .container-2 ul {
+        display: flex;
+        justify-content: center;
+       
+    }
+
+    .container-2 ul li .card {
+       max-width: 70px;
+        font-size: 10px;
+        margin: 2px;
+       
+    }
+
+    .container-2 ul li .card-1 {
+        max-width: 70px;
+         font-size: 10px;
+         margin: 2px;
+        
+     }
+
+     .footer {
+        margin-top: 30px;
+     }
+
+
+
+}
 
 
 
