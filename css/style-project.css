@@ -413,4 +413,8 @@ SLIDES
   .conj-dots {
     margin-top: 20px;
   }
+
+  .general-container {
+    padding-bottom: 0;
+  }
 }
