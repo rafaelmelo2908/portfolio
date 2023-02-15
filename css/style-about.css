@@ -355,7 +355,7 @@ body {
 
     .container-2 ul {
         display: flex;
-        justify-content: center;
+        justify-content: space-between;
        
     }
 
