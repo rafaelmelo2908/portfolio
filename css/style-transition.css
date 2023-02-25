@@ -22,7 +22,7 @@ FADE
 ************************/
 
 .fadeInAndFadeOut {
-  -webkit-animation: fadeinout 4s linear forwards;
+  -webkit-animation: fadeinout 6s linear forwards;
   animation: fadeinout 6s linear forwards;
   opacity: 0;
 }
