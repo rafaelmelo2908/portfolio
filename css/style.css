@@ -305,6 +305,13 @@ body {
 
   @media (max-width: 925px) {
 
+    .container-1 {
+   
+    height: 425px;
+    
+    
+}
+
     .container-2 {
         width: 100%;
         text-align: center;

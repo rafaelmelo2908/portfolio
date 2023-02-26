@@ -321,9 +321,16 @@ span {
 }
 
 @media (max-width: 925px) {
+
+  .container-1 {
+    height: 450px;
+    
+  }
+
   .container-2 {
     width: 100%;
     text-align: center;
+    margin: 0 auto;
   }
 
   .container-2 ul {
