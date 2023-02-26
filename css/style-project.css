@@ -389,6 +389,11 @@ SLIDES
 
 @media (max-width: 925px) {
 
+  .prev,
+.next {
+  top: 50%; 
+}
+
   .slideshow-container {
     height: 450px;
   }
