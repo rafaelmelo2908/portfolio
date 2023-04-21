@@ -27,10 +27,6 @@ font-weight: 600;
 body {
 color: var(--color-secondary);
 background: url(/image/herobg.png) no-repeat center center fixed;
--webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
 background-size: cover;
 margin: 0 auto;
 min-height: 100vh;
@@ -64,6 +60,12 @@ border-radius: 10px;
 html {
   scroll-padding-top: 100px;
 }
+
+body {
+  
+  background: var(--color-prymary);
+
+  }
 
 }
 
