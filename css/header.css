@@ -1,0 +1,165 @@
+/***HEADER-NAVBAR***/
+
+#header {
+    box-sizing: border-box;
+    height: 70px;
+    padding: 15px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: var(--color-prymary);
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 0.05rem 1.5rem rgba(255, 255, 255, 0.5);
+    z-index: 100;
+  }
+  
+  #header #nav ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  #header #nav a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin: 0 0.5rem;
+    color: var(--color-secondary);
+    padding: 0.7rem 0.7rem;
+    border-radius: 5px;
+    text-decoration: none;
+    
+  }
+  
+  #header #nav a:hover {
+    background: #252525;
+  }
+  
+  
+  #header #nav #menu {
+    display: flex;
+    list-style: none;
+    gap: 0.5rem;
+  }
+  
+  #header #nav .photoProfile img {
+    display: none;
+  } 
+  
+  #header #nav .photoProfile span {
+    display: none;
+  }
+  
+  #header #nav #menu a {
+    display: block;
+    padding: 0.5rem;
+  }
+  
+  #header #nav #btn-mobile {
+    display: none;
+  }
+  
+  #header .logo img {
+    width: 20%;
+  }
+  
+  /*****MEDIA QUERY (HEADER-NAVBAR) *******/
+  
+  @media (max-width: 990px) {
+
+    #header {
+      padding: 15px 15px;
+    }
+
+    #header .logo img {
+      width: 40px;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    
+    #header #nav #menu .photoProfile img {
+      display: block;
+      width: 150px;
+      border-radius: 50%;
+      margin: 15vh auto 0;
+      border: 10px solid #10274b;
+      opacity: 1;
+      
+    }
+  
+    #header #nav .photoProfile span {
+      display: flex;
+      text-align: center;
+      justify-content:center;
+      padding: 30px;
+      font-size: 20px;
+      align-items: center;
+      letter-spacing: 6px;
+      line-height: 1.6;
+    }
+  
+    #header #nav #btn-mobile {
+      color: var(--color-secondary);
+      display: flex;
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border: none;
+      background: none;
+      cursor: pointer;
+      gap: 0.5rem;
+    }
+  
+    #header #nav #menu {
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 70px;
+      right: 0px;
+      background: var(--color-prymary);
+      transition: 0.6s;
+      z-index: 1000;
+      height: 0px;
+      visibility: hidden;
+      overflow-y: hidden;
+      opacity: .95;
+    }
+  
+    #header #nav.active #menu {
+      height: calc(100vh - 70px);
+      visibility: visible;
+      overflow-y: auto;
+    }
+  
+    #header #nav #menu a {
+      padding: 1rem 0;
+      margin: 0 1rem;
+      border-bottom: 2px solid var(--color-secondary);
+    }
+  
+    #hamburger {
+      border-top: 2px solid;
+      width: 20px;
+    }
+    #hamburger::after,
+    #hamburger::before {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 2px;
+      background: currentColor;
+      margin-top: 5px;
+      transition: 0.3s;
+      position: relative;
+    }
+    #nav.active #hamburger {
+      border-top-color: transparent;
+    }
+    #nav.active #hamburger::before {
+      transform: rotate(135deg);
+    }
+    #nav.active #hamburger::after {
+      transform: rotate(-135deg);
+      top: -7px;
+    }
+  }
+  

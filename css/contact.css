@@ -1,0 +1,95 @@
+/***CONTACT***/
+
+section .contact-form {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 70px 0;
+  }
+  
+  section .contact-form h1 {
+    margin: 0;
+    font-weight: 250;
+    font-size: 40px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  section .contact-form p {
+    font-weight: 250;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 2rem 0 1.1rem;
+  }
+  
+  section .contact-form form {
+    position: relative;
+  }
+  
+  section .contact-form form input,
+  form textarea {
+    width: 100%;
+    padding: 17px;
+    border: none;
+    outline: none;
+    background: #1d1d20;
+    color: var(--color-secondary);
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    border-radius: 10px;
+  }
+  
+  section .contact-form textarea {
+    resize: none;
+    height: 200px;
+  }
+  
+  section .contact-form .btn {
+    display: inline-block;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    width: 120px;
+    height: 50px;
+    background: var(--color-prymary);
+    align-items: center;
+    border: solid var(--color-alternate) 1px;
+    font-size: 16px;
+    color: var(--color-secondary);
+    -webkit-transition: 500ms;
+    transition: 500ms;
+    border-radius: 0 15px 0 15px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  section .contact-form .btn:disabled {
+    cursor: not-allowed;
+    background: gray;
+  }
+  
+  section .contact-form .btn:hover {
+    border: 2px solid var(--color-prymary);
+    background: var(--color-secondary);
+    color: var(--color-prymary);
+    transform: scale(1.1);
+    border-radius: 15px 0 15px 0;
+  }
+  
+  /*****MEDIA QUERY - CONTACT *******/
+  
+  @media (max-width: 1100px) {
+    section .contact-form {
+      padding: 0 30px;
+      transition: 0.2s;
+      padding-bottom: 80px;
+    }
+}
+  
+@media (max-width: 770px) {
+  section .contact-form h1 {
+    font-size: 30px;
+  }
+}

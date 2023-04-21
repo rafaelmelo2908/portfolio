@@ -1,0 +1,14 @@
+/***Scroll by side ***/
+
+.js-scroll {
+    opacity: 0;
+    transform: translate3d(-200px, 0, 0);
+    transition: 2s;
+  }
+  
+  .js-scroll.active {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    
+  }
+  

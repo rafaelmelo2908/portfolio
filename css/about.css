@@ -1,0 +1,112 @@
+/***ABOUT***/
+
+section .about {
+    height: 100vh;
+  }
+  
+  section .container {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 50px;
+    max-width: 900px;
+    padding: 100px 0;
+    margin: 0 auto;
+  }
+  
+  section .container h1 {
+    margin: 40px 0 30px 0px;
+    font-weight: 250;
+    font-size: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  section .container div .border {
+    border-left: 3px solid var(--color-secondary);
+    border-image: linear-gradient(to bottom, #181818, #eee, #181818) 1 100%;
+  }
+  
+  section .container p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0em;
+    margin-inline-end: 0em;
+    padding-left: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 250;
+    line-height: 1.6;
+  }
+  
+  section .container .imgAbout {
+    border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    width: 250px;
+    height: 250px;
+    margin: 50px auto 0;
+    -webkit-box-shadow: 1px 1px 13px #20232e, -1px -1px 13px #d1d1d1;
+    box-shadow: 1px 1px 13px #1d1d20, -1px -1px 13px #d1d1d1;
+    color: #d1d1d1;
+    -webkit-transition: 500ms;
+    transition: 500ms;
+  }
+
+  section .container .conjImg {
+    margin: auto 0;
+  }
+  
+  section .container .conjImg h3 {
+    font-weight: 250;
+    margin-top: 30px;
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  
+  section .container .conjImg ul li {
+    list-style-type: none;
+  }
+  
+  section .container .conjImg ul li img {
+    width: 60px;
+  
+  }
+  
+  section .container .technologies {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    justify-content: space-between;
+  }
+  
+  /*****MEDIA QUERY - ABOUT *******/
+  
+  @media (max-width: 1100px) {
+    .about .container {
+      display: block;
+    }
+  
+    .container .conjImg .imgAbout {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 770px) {
+    .about .container {
+      padding: 0 30px;
+    }
+
+    section .container h1 {
+      font-size: 30px;
+      
+    }
+
+    section .container .conjImg h3 {
+      font-size: 18px;
+      font-weight: 300;
+    }
+
+    section .container p {
+      font-size: 18px;
+      font-weight: 300;
+    }
+  }

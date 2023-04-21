@@ -1,0 +1,69 @@
+/***STANDARD***/
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Proxima Nova', sans-serif;
+text-decoration: none;
+}
+
+:root {
+--color-prymary: #0f0e17;
+--color-secondary: #d1d1d1;
+--color-alternate: #FFBD59;
+}
+
+span.color{
+color: var(--color-alternate);
+font-weight: 600;
+}
+
+@font-face {
+  font-family: 'name';
+  src: url(/font/Proxima\ Nova\ Font.otf);
+}
+
+body {
+color: var(--color-secondary);
+background: url(/image/herobg.png) no-repeat center center fixed;
+-webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+background-size: cover;
+margin: 0 auto;
+min-height: 100vh;
+}
+
+ul {
+padding: 0;
+margin: 0;
+list-style: none;
+}
+
+
+html {
+  scroll-padding-top: 50px;
+  }
+
+::-webkit-scrollbar {
+width: 15px;
+}
+
+::-webkit-scrollbar-track {
+background: var(--color-prymary);
+}
+
+::-webkit-scrollbar-thumb {
+background: var(--color-secondary);
+border-radius: 10px;
+}
+
+@media (max-width: 770px) {
+html {
+  scroll-padding-top: 100px;
+}
+
+}
+
